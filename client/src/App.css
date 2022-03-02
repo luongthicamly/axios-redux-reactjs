@@ -1,0 +1,98 @@
+.App {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+a{
+  text-decoration: none ;
+  color: #000;
+}
+.banner{
+  background-color: #eff0f3;
+  min-height: 400px;
+}
+@font-face {
+  font-family: UTMFrenchVanilla;
+  src: url(./asset/fonts/UTMFrenchVanilla.woff);
+}
+@font-face {
+  font-family: SHImogenAgnes;
+  src: url(./asset/fonts/SHImogenAgnes.ttf);
+}
+@font-face {
+  font-family: Channel;
+  src: url(./asset/fonts/Channel.ttf);
+}
+@font-face {
+  font-family: Channel_Left;
+  src: url(./asset/fonts/Channel_Left-Slanted.ttf);
+}
+@font-face {
+  font-family: UTMBeautifulCaps;
+  src: url(./asset/fonts/UTMBeautifulCaps.woff);
+}
+.heading-title{
+  font-family: UTMFrenchVanilla;
+  color: #d33269;
+  font-size: 40px;
+  margin: 0;
+}
+/* .heading-title span{
+  position: relative;
+
+}
+.heading-title span::before{
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: #e46f9f;
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+} */
+/* .bottom-heading{
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #f7eaef;
+  position: relative;
+} */
+.signature{
+  color: #eda8c5;
+  position: relative;
+  font-family: SHImogenAgnes;
+  font-size: 30px;
+  width: 50%;
+  margin: 0 auto;
+}
+.signature span{
+  z-index: 99999;
+}
+.signature::before{
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: #f7eaef;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  z-index: -1;
+}
+.signature::after{
+  content: '';
+  width: 70px;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  left: 45%;
+  top: 50%;
+  z-index: -1;
+}

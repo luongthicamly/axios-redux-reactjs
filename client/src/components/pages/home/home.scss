@@ -1,0 +1,97 @@
+.bg-dark-custom{
+    background-color: #ededed;
+    padding: 1.2rem 0;
+}
+.banner-home{
+    .slider-home{
+        img{
+            width: 100%;
+            height: auto;
+        }
+        .slick-prev{
+            left: 25px;
+            z-index: 999;
+        }
+        .slick-next{
+            right: 25px;
+            z-index: 999;
+        }
+    }
+    .div-banner-img{
+        display: flex;
+        .item-banner-img{
+            width: 50%;
+            margin-top: 10px;
+            &:nth-child(1){
+                padding-right: 10px;
+            }
+            &:nth-child(2){
+                padding-left: 10px;
+            }
+        }
+    }
+    .div-banner-right{
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: auto;
+        }
+       &:hover{
+           img{
+               transform: scale(1.1);
+               transition: all .3s ease-in-out;
+           }
+       }
+    }
+    .div-category{
+        width: 270px;
+    }
+    @media screen and (min-width: 1400px) {
+        .slider-home{
+            width: calc(100% - 570px);
+        }
+        .div-banner-right{
+            width: 300px;
+            max-height: 500px;
+        }
+    }
+    @media screen and (max-width:1399px) and (min-width: 1200px) {
+        .slider-home{
+            width: calc(100% - 520px);
+        }
+        .div-banner-right{
+            width: 250px;
+            max-height: 412px;
+        }
+    }
+    @media screen and (max-width:1199px) and (min-width: 992px) {
+        .slider-home{
+            width: calc(100% - 470px);
+        }
+        .div-banner-right{
+            width: 200px;
+            max-height: 324px;
+        }
+    }
+    @media screen and (max-width: 991px) {
+        .div-category, 
+        .div-banner-right,
+        .div-banner-img{
+            display: none;
+        }
+        .slider-home{
+            width: 100%;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+        
+    }
+}
+@media screen and (max-width: 991px) {
+    .bg-dark-custom{
+        background-color: #fff;
+        padding: 10px 0 !important;
+    }
+}
