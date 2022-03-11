@@ -7,7 +7,7 @@ const users = [
     {
         id: 2,
         username: 'nguoi dung 2',
-        imgUser: './images/product/img2.jpg',
+        imgUser: '',
     },
     {
         id: 3,

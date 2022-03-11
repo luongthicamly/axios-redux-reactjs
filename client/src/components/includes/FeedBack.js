@@ -13,7 +13,7 @@ function FeedBack(props) {
     const listUser = users;
     const listFeedBack = feedBack;
     const listImgFeedBack = imagesFeedBack;
-    const lengListFeedback = listFeedBack.length;
+
     const renderItemFeedBack = () => {
         return listFeedBack.map( (feedBack, key)=>{
             
@@ -22,17 +22,16 @@ function FeedBack(props) {
                     <div className='item-feedback' key={key}>
                         <div className='avatar-user'>
                             {listUser.map((user, key)=> {
-                                console.log(user.id, feedBack.idUser)
-                                if(user.id == feedBack.idUser){
-                                    return(
-                                        <img src={`${users.imgUser}`} alt='' key={key}/>  
-                                    )
-                                } 
-                                // else{
-                                //     return <FaUserCircle key={key}/>
-                                // }
-                            })}
-                            
+                                    if(user.id == feedBack.idUser){
+                                        if(user.imgUser == ''){
+                                            return(
+                                                <FaUserCircle key={key}/>
+                                            )
+                                        } else{
+                                            return <img src={`.${user.imgUser}`} alt='' key={key}/>  
+                                        }
+                                    } 
+                                })}
                         </div>
                         <div className='content-feedback'>
                             <div className='info-user'>
@@ -64,15 +63,17 @@ function FeedBack(props) {
                                     {feedBack.comment}
                                 </div>
                                 <div className='img-feedback mt-4'>
-                                    <div className='item-img'>
-                                        <img src='../images/product/img1.jpg' alt=''/>
-                                    </div>
-                                    <div className='item-img'>
-                                        <img src='../images/product/img2.jpg' alt=''/>
-                                    </div>
-                                    <div className='item-img'>
-                                        <img src='../images/product/img3.jpg' alt=''/>
-                                    </div>
+                                    {
+                                        listImgFeedBack.map((img, key)=>{
+                                            if(feedBack.id == img.idFeedBack){
+                                                return(
+                                                    <div className='item-img' key={key}>
+                                                        <img src={`.${img.img}`} alt=''/>
+                                                    </div>
+                                                )
+                                            }
+                                        })                                        
+                                    }
                                 </div>
                             </div>   
                         </div>

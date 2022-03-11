@@ -246,6 +246,7 @@
         .container-tab{
             .content-tab{
                 display: none;
+                padding: 0 20px;
                 &.active{
                     display: block;
                 }

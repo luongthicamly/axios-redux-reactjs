@@ -1,5 +1,11 @@
 .item-feedback{
     display: flex;
+    display: flex;
+    border-bottom: 1px dotted #e5dddd;
+    padding-bottom: 20px;
+    &:last-child{
+        border-bottom: none;
+    }
     &:nth-child(n+2){
         margin-top: 1.5rem;
     }
@@ -7,8 +13,13 @@
         overflow: hidden;
         width: 40px;
         height: 40px;
+        border-radius: 50%;
         svg{
             font-size: 35px;
+        }
+        img{
+            width: 100%;
+            height: auto;
         }
     }
     .content-feedback{
