@@ -2,6 +2,7 @@ import React from 'react';
 import Slider from 'react-slick';
 import "../../../node_modules/slick-carousel/slick/slick.css"; 
 import "../../../node_modules/slick-carousel/slick/slick-theme.css";
+import Category from './Category';
 
 function BannerHome() {
     const settings = {
@@ -16,8 +17,7 @@ function BannerHome() {
     return (
        <div className='bg-dark-custom'>
            <div  className='container'>
-                <div className='banner-home row '>
-                    <div className='div-category'>111111</div>
+                <div className='banner-home'>
                     <div className='slider-home'>
                         <Slider {...settings}>
                             <div>
@@ -27,19 +27,17 @@ function BannerHome() {
                                 <img src='./images/banner/banner-3.jpg' alt=''/>
                             </div>
                         </Slider>
-                        <div className='div-banner-img'>
-                            <div className='item-banner-img'>
-                                <img src='./images/banner/banner-mini-1.jpg'/>
-                            </div>
-                            <div className='item-banner-img'>
-                                <img src='./images/banner/banner-mini-2.jpg'/>
-                            </div>
+                    </div>
+                    <div className='banner-small'>
+                        <div className='item-banner-img'>
+                            <img src='./images/banner/banner-mini-1.jpg'/>
+                        </div>
+                        <div className='item-banner-img'>
+                            <img src='./images/banner/banner-mini-2.jpg'/>
                         </div>
                     </div>
-                    <div className='div-banner-right'>
-                        <img src='./images/banner/banner-right.jpg' alt=''/>
-                    </div>
                 </div>
+                <Category/>
             </div>
        </div>
     );

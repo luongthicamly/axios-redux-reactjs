@@ -11,6 +11,8 @@ import Cart from './components/pages/cart/Cart';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import './App.css';
+import DetailProduct from './components/pages/detailProduct/DetailProduct';
+import HotProduct from './components/includes/HotProduct';
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
               <Route path='/service' element={<Service/>}></Route>
               <Route path='/contact' element={<Contact/>}></Route>
               <Route path='/cart' element={<Cart/>}></Route>
+              <Route path={`/detail-product/:id`} element={<DetailProduct/>}></Route>
+              <Route path='/hot-product' element={<HotProduct/>}></Route>
           </Routes>
         
         </main>
