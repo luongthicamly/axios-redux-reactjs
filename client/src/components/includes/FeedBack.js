@@ -13,7 +13,13 @@ function FeedBack(props) {
     const listUser = users;
     const listFeedBack = feedBack;
     const listImgFeedBack = imagesFeedBack;
-
+    const starsFeedback = (star) => {
+        let arrStars = [];
+        for(let i =0; i<star; i++){
+            arrStars.push(<FaStar key={i}/>);
+        }
+        return arrStars;
+    }
     const renderItemFeedBack = () => {
         return listFeedBack.map( (feedBack, key)=>{
             
@@ -43,10 +49,7 @@ function FeedBack(props) {
                                     }
                                 })}
                                 <div className='stars'>
-                                    {stars.map(value => (
-                                        <FaStar key={value}/>
-                                        ))
-                                    }
+                                    {starsFeedback(feedBack.evaluate)}
                                     <div className='none-stars'>
                                         {noneStars.map(value => (
                                             <FaRegStar key={value}/>

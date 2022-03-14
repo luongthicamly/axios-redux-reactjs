@@ -6,6 +6,7 @@ import { FaStar} from "react-icons/fa";
 import './detailProduct.scss';
 import imagesProduct from '../../../database/imagesProduct';
 import FeedBack from '../../includes/FeedBack';
+import { connect } from 'react-redux';
 
 function DetailProduct(props) {
     let {id} = useParams();
@@ -175,6 +176,7 @@ function DetailProduct(props) {
             }
         }
     }
+    console.log(props.cart)
     return (
         <div className='detail-page pt-5'>
             <div className='container'>
@@ -185,5 +187,9 @@ function DetailProduct(props) {
         </div>
     );
 }
-
-export default DetailProduct;
+const mapState = (state) => {
+    return{
+        cart: state.cart
+    }
+}
+export default connect(mapState)(DetailProduct);

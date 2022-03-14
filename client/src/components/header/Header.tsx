@@ -13,7 +13,6 @@ function Header() {
     const splitLocation = pathname.split("/");
     const [isCategory, setIsCategory] = useState(false);
     const [isMenu, setIsMenu] = useState(false);
-    const [showCategory, setShowCategory] = useState(false);
 
     const handleCategory = () => {
         setIsCategory(!isCategory);
@@ -25,9 +24,6 @@ function Header() {
         setIsCategory(false);
         setIsMenu(false);
     }
-    // const handleCategoryDesktop = () => {
-    //     setShowCategory(!showCategory);
-    // }
     return (
         <header className="header">
             <div className='container'>
@@ -102,7 +98,7 @@ function Header() {
                                     <li className={splitLocation[1] === 'cart' ? 'active' : ''}>
                                         <div className='number-cart'>
                                             <div>
-                                                <span>2</span>
+                                                <span>0</span>
                                             </div>
                                         </div>
                                         <Link to='/cart'><FaShoppingCart /></Link>
@@ -197,7 +193,7 @@ function Header() {
                             <li className={splitLocation[1] === 'cart' ? 'active' : ''}>
                                 <div className='number-cart'>
                                     <div>
-                                        <span>2</span>
+                                        <span>0</span>
                                     </div>
                                 </div>
                                 <Link to='/cart'><FaShoppingCart /></Link>
