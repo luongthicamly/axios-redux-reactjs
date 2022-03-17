@@ -5,56 +5,60 @@ import feedBack from '../../database/feedBack';
 import imagesFeedBack from '../../database/imagesFeedBack';
 import users from '../../database/users';
 import './scss/feedback.scss';
+import feedBackWithUser from '../../api/feedback';
 
 function FeedBack(props) {
-    const {id} = useParams();
-    const stars = [1,2,3];
-    const noneStars = [1,2,3,4,5];
+    const { id } = useParams();
+    const noneStars = [1, 2, 3, 4, 5];
     const listUser = users;
     const listFeedBack = feedBack;
     const listImgFeedBack = imagesFeedBack;
-
+    const listStars = (star) => {
+        let list = []
+        for (let i = 0; i < star; i++) {
+            list.push(<FaStar key={i} />);
+        }
+        return list
+    }
+    console.log(feedBackWithUser());
     const renderItemFeedBack = () => {
-        return listFeedBack.map( (feedBack, key)=>{
-            
-            if(feedBack.idProduct == id){
-                return(
+        return listFeedBack.map((feedBack, key) => {
+
+            if (feedBack.idProduct == id) {
+                return (
                     <div className='item-feedback' key={key}>
                         <div className='avatar-user'>
-                            {listUser.map((user, key)=> {
-                                    if(user.id == feedBack.idUser){
-                                        if(user.imgUser == ''){
-                                            return(
-                                                <FaUserCircle key={key}/>
-                                            )
-                                        } else{
-                                            return <img src={`.${user.imgUser}`} alt='' key={key}/>  
-                                        }
-                                    } 
-                                })}
+                            {listUser.map((user, key) => {
+                                if (user.id == feedBack.idUser) {
+                                    if (user.imgUser == '') {
+                                        return (
+                                            <FaUserCircle key={key} />
+                                        )
+                                    } else {
+                                        return <img src={`.${user.imgUser}`} alt='' key={key} />
+                                    }
+                                }
+                            })}
                         </div>
                         <div className='content-feedback'>
                             <div className='info-user'>
-                                {listUser.map((user, key)=> {
-                                    if(user.id == feedBack.idUser){
-                                        return(
-                                            <p key={key}>{user.username}</p>  
+                                {listUser.map((user, key) => {
+                                    if (user.id == feedBack.idUser) {
+                                        return (
+                                            <p key={key}>{user.username}</p>
                                         )
                                     }
                                 })}
                                 <div className='stars'>
-                                    {stars.map(value => (
-                                        <FaStar key={value}/>
-                                        ))
-                                    }
+                                    {listStars(feedBack.evaluate)}
                                     <div className='none-stars'>
                                         {noneStars.map(value => (
-                                            <FaRegStar key={value}/>
-                                            ))
-                                        }    
+                                            <FaRegStar key={value} />
+                                        ))
+                                        }
                                     </div>
                                 </div>
-                            </div> 
+                            </div>
                             <div className='info-feedback mt-2'>
                                 <div className='time-feedback'>
                                     {feedBack.date}
@@ -64,27 +68,27 @@ function FeedBack(props) {
                                 </div>
                                 <div className='img-feedback mt-4'>
                                     {
-                                        listImgFeedBack.map((img, key)=>{
-                                            if(feedBack.id == img.idFeedBack){
-                                                return(
+                                        listImgFeedBack.map((img, key) => {
+                                            if (feedBack.id == img.idFeedBack) {
+                                                return (
                                                     <div className='item-img' key={key}>
-                                                        <img src={`.${img.img}`} alt=''/>
+                                                        <img src={`.${img.img}`} alt='' />
                                                     </div>
                                                 )
                                             }
-                                        })                                        
+                                        })
                                     }
                                 </div>
-                            </div>   
+                            </div>
                         </div>
                     </div>
                 )
             }
         })
-    }   
+    }
     return (
         <>
-        {renderItemFeedBack()}
+            {renderItemFeedBack()}
         </>
     );
 }
