@@ -176,7 +176,6 @@ function DetailProduct(props) {
             }
         }
     }
-    console.log(props.cart)
     return (
         <div className='detail-page pt-5'>
             <div className='container'>

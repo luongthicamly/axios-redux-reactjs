@@ -61,6 +61,7 @@ a{
 }
 .signature span{
   z-index: 99999;
+  position: relative;
 }
 .signature::before{
   content: '';
@@ -70,15 +71,21 @@ a{
   position: absolute;
   left: 0;
   top: 50%;
-  z-index: -1;
+  z-index: 0;
 }
 .signature::after{
   content: '';
   width: 70px;
   height: 1px;
-  background-color: #fff;
+  background-color: #f8f9fa;
   position: absolute;
   left: 45%;
   top: 50%;
-  z-index: -1;
+  z-index: 1;
+}
+.bg-dark .signature::after{
+  background-color: #212529;
+}
+.bg-dark .bg-dark-custom{
+  background-color: #000;
 }

@@ -3,17 +3,17 @@ import logo from '../../asset/images/logo-white.png';
 import './header.scss';
 import { Button } from 'react-bootstrap';
 import { Link, useLocation } from 'react-router-dom';
-import { BiSearchAlt2, BiPhoneCall } from "react-icons/bi";
+import { BiSearchAlt2, BiSun, BiMoon } from "react-icons/bi";
 import { MdPhonelinkRing } from "react-icons/md";
 import { FaUserCog, FaUserPlus, FaUniversalAccess , FaShoppingCart, FaAlignLeft, FaAlignRight, FaTimes} from "react-icons/fa";
 import { GiAmpleDress,GiTrousers, GiSkirt, GiTShirt, GiHandBag, GiSonicShoes, GiDoubleNecklace, GiConverseShoe, GiFire, GiWatch } from "react-icons/gi";
 
-function Header() {
+function Header(props) {
     const {pathname} = useLocation();
     const splitLocation = pathname.split("/");
     const [isCategory, setIsCategory] = useState(false);
     const [isMenu, setIsMenu] = useState(false);
-
+    const {onChangeTheme, bgTheme} = props;
     const handleCategory = () => {
         setIsCategory(!isCategory);
     }
@@ -23,6 +23,9 @@ function Header() {
     const handleClose = () => {
         setIsCategory(false);
         setIsMenu(false);
+    }
+    const handleChangeTheme = () => {
+        onChangeTheme()
     }
     return (
         <header className="header">
@@ -36,6 +39,9 @@ function Header() {
                             <div className='col-lg-6 col-md-6 col-12'>
                                 <Button className='btn-sign'><FaUserPlus/>sign</Button>
                                 <Button className='btn-login'><FaUserCog/>login</Button>
+                                <span className='change-bg' onClick={()=> handleChangeTheme()}>
+                                    {bgTheme == true ? <BiSun/> : <BiMoon/>}
+                                </span>
                             </div>
                         </div>
                     </div>

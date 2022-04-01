@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
@@ -15,11 +15,15 @@ import DetailProduct from './components/pages/detailProduct/DetailProduct';
 import HotProduct from './components/includes/HotProduct';
 
 function App() {
+  const [bgTheme, setBgTheme] = useState(true);
+  const handleChangeTheme = () => {
+    setBgTheme(!bgTheme);
+}
   return (
     <div className="App">
       <BrowserRouter>
-        <Header/>
-        <main>
+        <Header  onChangeTheme={handleChangeTheme} bgTheme={bgTheme}/>
+        <main className={bgTheme == true ? 'bg-light' : 'bg-dark'}>
         
           <Routes>
               <Route path='/' element={<Home/>}></Route>
