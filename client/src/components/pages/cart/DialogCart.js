@@ -5,17 +5,16 @@ import './cart.scss';
 
 function DialogCart(props) {
     const [total, setTotal] = useState(0)
-    const [carts, setCarts] = useState(props.carts)
+    const {carts} = props;
     useEffect(()=>{
         let total = 0
-        for(let i=0; i<props.carts.length; i++){
-            const sum = props.carts[i].quality * props.carts[i].price;
+        for(let i=0; i<carts.length; i++){
+            const sum = carts[i].quality * carts[i].price;
             total += sum;
         }
         setTotal(total)
-        setCarts(props.carts)
         
-    },[props.carts])
+    },[carts])
     
     return (
         <div className='dialog_cart'>

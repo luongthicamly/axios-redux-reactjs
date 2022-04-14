@@ -10,6 +10,12 @@ export const updateCart = (payload) => {
         payload: payload
     }
 }
+export const updateQuality = (payload) => {
+    return{
+        type: 'UPDATE_QUALITY',
+        payload: payload
+    }
+}
 export const addtocart = (product) => {
     return{
         type: 'ADD_TO_CART',

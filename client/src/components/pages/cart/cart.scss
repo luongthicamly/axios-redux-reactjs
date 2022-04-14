@@ -50,3 +50,107 @@
         color: white;
     }
 }
+.page-cart{
+    background-color: white;
+    box-shadow: 0px 15px 20px -6px rgb(0 0 0 / 15%);
+    padding: 10px;
+    .title-cart, .item-cart{
+        display: flex;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        .end-title{
+            width: 40px;
+        }
+        .total-product{
+            width: 100px;
+        }
+        .quality{
+            width: 100px;
+        }
+        .price{
+            width: 100px;
+        }
+        .name-product{
+            width: calc(100% - 340px);
+            text-align: left;
+        }
+    }
+    .item-cart{
+        .name-product{
+            display: flex;
+            align-items: center;
+            .img-product{
+                width: 100px;
+                height: 100px;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                }
+            }
+            .name-sp{
+                width: calc(80% - 270px);
+                height: 100%;
+                padding-left: 10px;
+            }
+            .type-product{
+                width: 20%;
+            }
+        }
+        .end-title, .total-product, .quality, .price{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .quality{
+            .box-quality{
+                display: flex;
+                align-items: center;
+                border: 1px solid #ccc;
+                .btn-minus, .btn-plus{
+                    background-color: transparent;
+                    border: none;
+                    height: 30px;
+                    width: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 20px;
+                    cursor: pointer;
+                    &.readOnly{
+                        background-color: rgb(233, 233, 233);
+                        opacity: 0.5;
+                        cursor: no-drop;
+                    }
+                }
+                .btn-minus{
+                    border-right: 1px solid #ccc;
+                }
+                .btn-plus{
+                    border-left: 1px solid #ccc;
+                }
+                input{
+                    height: 30px;
+                    width: 45px;
+                    border: none;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .footer-cart{
+        display: flex;
+        padding: 20px;
+        font-weight: bold;
+        .total-cart, .total-product, .total-price-cart{
+            width: calc((100% - 200px ) / 3);
+            display: flex;
+            align-items: center;
+        }
+        .pay-cart{
+            width: 200px;
+            background-color: #d0011b;
+            color: white;
+            padding: 10px;
+        }
+    }
+}

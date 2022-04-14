@@ -5,18 +5,15 @@ import { addtocart, updateCart } from '../../../action/action';
 function AddToCart(props) {
     const {idProduct,name, image, size, quality, color, price, carts} = props;
     const dispatch = useDispatch();
-    console.log(carts)
     const handleAddToCart = () => {
         const checkProduct = carts.findIndex(i=> parseInt(i.idProduct) == idProduct);
         
         if(checkProduct != -1 ){
             const updateProduct = {
-                // indexProduct: checkProduct,
                 quality: quality,
                 idProduct: idProduct
             }
             dispatch(updateCart(updateProduct));
-            console.log('da ton tai',checkProduct)
         } else{
             const product = {
                 idProduct,
