@@ -7,6 +7,7 @@ import './detailProduct.scss';
 import imagesProduct from '../../../database/imagesProduct';
 import FeedBack from '../../includes/FeedBack';
 import { connect } from 'react-redux';
+import AddToCart from './AddToCart';
 
 function DetailProduct(props) {
     let {id} = useParams();
@@ -94,7 +95,7 @@ function DetailProduct(props) {
                                 </div>
                             </div>
                             <p className='price-product'>
-                                <span>{listProduct[i].price}</span>
+                                <span>{listProduct[i].price} VND</span>
                             </p>
                             <div className='color-product'>
                                 <div className='title'>
@@ -130,14 +131,15 @@ function DetailProduct(props) {
                                     Còn {amount} sản phẩm
                                 </div>
                             </div>
-                            <div className='div-btn'>
-                                <div className='buy-now'>
-                                    Mua ngay
-                                </div>
-                                <div className='add-to-cart'>
-                                    Thêm vào giỏ hàng
-                                </div>
-                            </div>
+                            <AddToCart 
+                                idProduct={id}
+                                name={listProduct[i].name}
+                                price ={listProduct[i].price}
+                                image ={imgDefault}
+                                size={size} 
+                                quality={quality}
+                                color={color} 
+                            />
                             <div className='shipping-policy'>
                                 <div className='logo'>
                                     <img src='../images/logo.png' alt=''/>

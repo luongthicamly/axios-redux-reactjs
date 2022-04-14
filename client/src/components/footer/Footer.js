@@ -6,7 +6,7 @@ import notificationImg from '../../asset/images/sale.png'
 
 function Footer() {
     return (
-        <footer className='mt-5'>
+        <footer>
             <div className='bg-new-letter pt-2 '>
                 <div className='container'>
                    <div className='row'>

@@ -7,13 +7,15 @@ import { BiSearchAlt2, BiSun, BiMoon } from "react-icons/bi";
 import { MdPhonelinkRing } from "react-icons/md";
 import { FaUserCog, FaUserPlus, FaUniversalAccess , FaShoppingCart, FaAlignLeft, FaAlignRight, FaTimes} from "react-icons/fa";
 import { GiAmpleDress,GiTrousers, GiSkirt, GiTShirt, GiHandBag, GiSonicShoes, GiDoubleNecklace, GiConverseShoe, GiFire, GiWatch } from "react-icons/gi";
+import { connect } from 'react-redux';
+import DialogCart from '../pages/cart/DialogCart';
 
 function Header(props) {
     const {pathname} = useLocation();
     const splitLocation = pathname.split("/");
     const [isCategory, setIsCategory] = useState(false);
     const [isMenu, setIsMenu] = useState(false);
-    const {onChangeTheme, bgTheme} = props;
+    const {onChangeTheme, bgTheme, carts} = props;
     const handleCategory = () => {
         setIsCategory(!isCategory);
     }
@@ -104,11 +106,12 @@ function Header(props) {
                                     <li className={splitLocation[1] === 'cart' ? 'active' : ''}>
                                         <div className='number-cart'>
                                             <div>
-                                                <span>0</span>
+                                                <span>{carts.length}</span>
                                             </div>
                                         </div>
                                         <Link to='/cart'><FaShoppingCart /></Link>
                                     </li>
+                                    <DialogCart />
                                 </ul>
                             </div>
                         </div>
@@ -199,7 +202,7 @@ function Header(props) {
                             <li className={splitLocation[1] === 'cart' ? 'active' : ''}>
                                 <div className='number-cart'>
                                     <div>
-                                        <span>0</span>
+                                        <span>{carts.length}</span>
                                     </div>
                                 </div>
                                 <Link to='/cart'><FaShoppingCart /></Link>
@@ -211,5 +214,9 @@ function Header(props) {
         </header>
     );
 }
-
-export default Header;
+const mapState = (state) => {
+    return{
+        carts: state.carts
+    }
+}
+export default connect(mapState)(Header);

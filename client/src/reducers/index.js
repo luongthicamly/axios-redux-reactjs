@@ -2,7 +2,7 @@ import React from 'react';
 import {combineReducers} from 'redux';
 import CartReducer from './includes/CartReducer';
 const rootReducer = combineReducers({
-    cart: CartReducer
+    carts: CartReducer
 })
 
 export default rootReducer;

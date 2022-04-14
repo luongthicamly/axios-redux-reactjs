@@ -4,9 +4,15 @@ export const getAllProduct = (mess) => {
         payload: mess
     }
 }
-export const cartProduct = (quality) => {
+export const updateCart = (payload) => {
     return{
         type: 'UPDATE_CART',
-        payload: quality
+        payload: payload
+    }
+}
+export const addtocart = (product) => {
+    return{
+        type: 'ADD_TO_CART',
+        payload: product
     }
 }

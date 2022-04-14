@@ -3,6 +3,12 @@
   font-size: 14px;
   text-align: center;
 }
+main{
+  padding: 0.5rem 0 4rem 0;
+}
+main.no-padding{
+  padding-top: 0 !important;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

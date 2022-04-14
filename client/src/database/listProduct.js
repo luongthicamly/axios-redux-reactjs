@@ -2,7 +2,7 @@ const ListProduct = [
     {   id: 1,
         name: 'sản phẩm 1',
         img: './images/product/img1.jpg',
-        price: '150.000 VND',
+        price: 150000,
         detail: `
 Áo thun nữ dáng ôm ❤️ Áo len mỏng trễ vai tay dài sexy phong cách Ulzzang Hải Lan Store HL02 FREESIZE dưới 55kg
 1.Nội dung bắt buộc cho TẤT CẢ các loại hàng hóa/dịch vụ: 
@@ -79,7 +79,7 @@ Inbox cho Shop nhé ^^
     {   id: 2,
         name: 'sản phẩm 2',
         img: './images/product/img2.jpg',
-        price: '150.000 VND',
+        price: 150000,
         detail: `
 Áo thun nữ dáng ôm ❤️ Áo len mỏng trễ vai tay dài sexy phong cách Ulzzang Hải Lan Store HL02 FREESIZE dưới 55kg
 1.Nội dung bắt buộc cho TẤT CẢ các loại hàng hóa/dịch vụ: 
@@ -156,7 +156,7 @@ Inbox cho Shop nhé ^^
     {   id: 3,
         name: 'sản phẩm 3',
         img: './images/product/img3.jpg',
-        price: '150.000 VND',
+        price: 150000,
         detail: `
 Áo thun nữ dáng ôm ❤️ Áo len mỏng trễ vai tay dài sexy phong cách Ulzzang Hải Lan Store HL02 FREESIZE dưới 55kg
 1.Nội dung bắt buộc cho TẤT CẢ các loại hàng hóa/dịch vụ: 
@@ -233,7 +233,7 @@ Inbox cho Shop nhé ^^
     {   id: 4,
         name: 'sản phẩm4',
         img: './images/product/img4.jpg',
-        price: '150.000 VND',
+        price: 150000,
         detail: `
 Áo thun nữ dáng ôm ❤️ Áo len mỏng trễ vai tay dài sexy phong cách Ulzzang Hải Lan Store HL02 FREESIZE dưới 55kg
 1.Nội dung bắt buộc cho TẤT CẢ các loại hàng hóa/dịch vụ: 
@@ -310,7 +310,7 @@ Inbox cho Shop nhé ^^
     {   id: 5,
         name: 'sản phẩm 5',
         img: './images/product/img5.jpg',
-        price: '150.000 VND',
+        price: 150000,
         detail: `
 Áo thun nữ dáng ôm ❤️ Áo len mỏng trễ vai tay dài sexy phong cách Ulzzang Hải Lan Store HL02 FREESIZE dưới 55kg
 1.Nội dung bắt buộc cho TẤT CẢ các loại hàng hóa/dịch vụ: 
@@ -387,7 +387,7 @@ Inbox cho Shop nhé ^^
     {   id: 10,
         name: 'sản phẩm 5',
         img: './images/product/img5.jpg',
-        price: '150.000 VND',
+        price: 150000,
         detail: `
 Áo thun nữ dáng ôm ❤️ Áo len mỏng trễ vai tay dài sexy phong cách Ulzzang Hải Lan Store HL02 FREESIZE dưới 55kg
 1.Nội dung bắt buộc cho TẤT CẢ các loại hàng hóa/dịch vụ: 
@@ -464,7 +464,7 @@ Inbox cho Shop nhé ^^
     {   id: 6,
         name: 'sản phẩm 1',
         img: './images/product/img1.jpg',
-        price: '150.000 VND',
+        price: 150000,
         detail: `
 Áo thun nữ dáng ôm ❤️ Áo len mỏng trễ vai tay dài sexy phong cách Ulzzang Hải Lan Store HL02 FREESIZE dưới 55kg
 1.Nội dung bắt buộc cho TẤT CẢ các loại hàng hóa/dịch vụ: 
@@ -541,7 +541,7 @@ Inbox cho Shop nhé ^^
     {   id: 7,
         name: 'sản phẩm 2',
         img: './images/product/img2.jpg',
-        price: '150.000 VND',
+        price: 150000,
         detail: `
 Áo thun nữ dáng ôm ❤️ Áo len mỏng trễ vai tay dài sexy phong cách Ulzzang Hải Lan Store HL02 FREESIZE dưới 55kg
 1.Nội dung bắt buộc cho TẤT CẢ các loại hàng hóa/dịch vụ: 
@@ -618,7 +618,7 @@ Inbox cho Shop nhé ^^
     {   id: 8,
         name: 'sản phẩm 3',
         img: './images/product/img3.jpg',
-        price: '150.000 VND',
+        price: 150000,
         detail: `
 Áo thun nữ dáng ôm ❤️ Áo len mỏng trễ vai tay dài sexy phong cách Ulzzang Hải Lan Store HL02 FREESIZE dưới 55kg
 1.Nội dung bắt buộc cho TẤT CẢ các loại hàng hóa/dịch vụ: 
@@ -695,7 +695,7 @@ Inbox cho Shop nhé ^^
     {   id: 9,
         name: 'sản phẩm4',
         img: './images/product/img4.jpg',
-        price: '150.000 VND',
+        price: 150000,
         detail: `
 Áo thun nữ dáng ôm ❤️ Áo len mỏng trễ vai tay dài sexy phong cách Ulzzang Hải Lan Store HL02 FREESIZE dưới 55kg
 1.Nội dung bắt buộc cho TẤT CẢ các loại hàng hóa/dịch vụ: 

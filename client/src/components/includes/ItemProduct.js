@@ -21,7 +21,7 @@ function ItemProduct(props) {
                                     ))
                                 }
                             </div>
-                            <p>{product.price}</p> 
+                            <p>{product.price} VND</p> 
                         </div>
                         <div className='add-to-cart'><FaCartPlus/></div>
                     </div>

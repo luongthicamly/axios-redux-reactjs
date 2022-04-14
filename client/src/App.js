@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import Home from './components/pages/home/Home';
 import Products from './components/pages/product/Products';
 import News from './components/pages/news/News';
@@ -19,11 +19,14 @@ function App() {
   const handleChangeTheme = () => {
     setBgTheme(!bgTheme);
 }
+const pathname = window.location.pathname;
   return (
     <div className="App">
       <BrowserRouter>
         <Header  onChangeTheme={handleChangeTheme} bgTheme={bgTheme}/>
-        <main className={bgTheme == true ? 'bg-light' : 'bg-dark'}>
+        <main 
+          className={`${bgTheme == true ? 'bg-light' : 'bg-dark'} ${pathname == '/' ? 'no-padding' : ''}`  }
+        >
         
           <Routes>
               <Route path='/' element={<Home/>}></Route>
